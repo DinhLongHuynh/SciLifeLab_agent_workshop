@@ -22,7 +22,6 @@ By the end of this workshop, participants will:
 workshop/
 ├── README.md                 # This comprehensive guide
 ├── requirements.txt          # Python dependencies
-├── .env                     # API keys and configuration
 ├── agent_demo.py            # Complete working demo implementation
 ├── lab_1.ipynb             # Main workshop notebook (exercises)
 ├── answers_1.ipynb         # Solution notebook with completed code
