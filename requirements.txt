@@ -1,0 +1,17 @@
+# LangGraph ReAct Demo Requirements
+# Core LangGraph and LangChain dependencies
+langgraph
+langchain[openai]
+langchain-core
+langchain-openai
+
+# Additional tools and utilities
+litsense-wrapper
+chembl_webresource_client
+python-dotenv
+typing-extensions
+
+# Optional dependencies for enhanced functionality
+# These are typically included with langchain but listed for completeness
+requests
+pydantic
