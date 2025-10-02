@@ -1,5 +1,18 @@
 # SciLifeLab Workshop: LangGraph AI Agents for Drug Discovery
 
+## Extension Ideas (NEED HELP !!!)
+
+### Some ideas (haven't implemented ye)
+
+1. **Custom Nodes**: Create specialized processing nodes
+2. **Custom Tools**: Create several tools, i.e. Protein Structure Tools, Patent Search, Clinical Trial Tools, Regulatory DB
+3. **Structured Output**: use output class from pydantic base model to structure the output of agents
+4. **Multi-Agent Systems**: Coordinate multiple specialized agents
+5. **Long-term memoery**: Add long-term smemory
+
+
+---
+
 A comprehensive hands-on workshop teaching participants how to build AI agents using LangGraph, specifically focused on drug discovery applications.
 
 ## Workshop Overview
@@ -81,12 +94,3 @@ workshop/
 - **Integration**: LangChain ChatOpenAI wrapper
 
 
-## Extension Ideas (NEED HELP !!!)
-
-### Some ideas (haven't implemented ye)
-
-1. **Custom Nodes**: Create specialized processing nodes
-2. **Custom Tools**: Create several tools, i.e. Protein Structure Tools, Patent Search, Clinical Trial Tools, Regulatory DB
-3. **Structured Output**: use output class from pydantic base model to structure the output of agents
-4. **Multi-Agent Systems**: Coordinate multiple specialized agents
-5. **Long-term memoery**: Add long-term smemory
