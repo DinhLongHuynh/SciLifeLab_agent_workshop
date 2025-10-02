@@ -4,7 +4,7 @@ A comprehensive hands-on workshop teaching participants how to build AI agents u
 
 ## Workshop Overview
 
-This 60-minute interactive workshop introduces participants to **LangGraph**, a low-level orchestration framework for constructing stateful AI workflows using graphs. Participants will learn to build AI agents that can perform mathematical calculations, search scientific literature, and query drug databases.
+This 70-minute interactive workshop introduces participants to **LangGraph**, a low-level orchestration framework for constructing stateful AI workflows using graphs. Participants will learn to build AI agents that can perform mathematical calculations, search scientific literature, and query drug databases.
 
 ### Learning Objectives
 
@@ -72,28 +72,21 @@ workshop/
 ## API Dependencies & External Services
 
 ### LitSense API
-- **Purpose**: Semantic search of PubMed literature
-- **Technology**: NCBI LitSense2 API with neural embeddings
-- **Capabilities**: Context-aware biomedical text retrieval
 - **Reference**: [LitSense NAR 2025](https://academic.oup.com/nar/article/53/W1/W361/8133630)
 
 ### ChEMBL Web Services
-- **Purpose**: Comprehensive drug and bioactivity database
-- **Coverage**: 2M+ compounds, extensive bioactivity data
-- **Features**: Synonym search, mechanism data, clinical phases
 - **Documentation**: [ChEMBL Interface Docs](https://chembl.gitbook.io/chembl-interface-documentation/web-services)
 
 ### OpenAI API (Will be replaced by SciLifeLab server)
-- **Model**: GPT-4o for tool-calling capabilities
-- **Configuration**: Temperature=0 for consistent responses
 - **Integration**: LangChain ChatOpenAI wrapper
 
 
 ## Extension Ideas (NEED HELP !!!)
 
-### Advanced Features to Explore
+### Some ideas (haven't implemented ye)
 
 1. **Custom Nodes**: Create specialized processing nodes
 2. **Custom Tools**: Create several tools, i.e. Protein Structure Tools, Patent Search, Clinical Trial Tools, Regulatory DB
-3. **Multi-Agent Systems**: Coordinate multiple specialized agents
-4. **Long-term memoery**: Add long-term memory
+3. **Structured Output**: use output class from pydantic base model to structure the output of agents
+4. **Multi-Agent Systems**: Coordinate multiple specialized agents
+5. **Long-term memoery**: Add long-term smemory
