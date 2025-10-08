@@ -1,6 +1,6 @@
-# **MCP Workshop \- Official SDK Implementation**
+# **MCP Workshop - Official SDK Implementation**
 
-This directory contains production-ready MCP servers and clients built using the official Model Context Protocol Python SDK.
+This directory contains MCP servers and clients built using the official Model Context Protocol Python SDK.
 
 ## **Quick Start**
 
@@ -34,7 +34,7 @@ Replace ```"PASTE-YOUR_KEY-HERE"``` with your actual key, making sure to keep th
 5.  Start the server in the same terminal:
 
     ```bash
-    python MCP_scratch/advanced_server.py
+    python MCP_python_SDK/advanced_server.py
     ```
 
     Keep this terminal open.  **Do not disconnect it.**
@@ -49,26 +49,26 @@ Replace ```"PASTE-YOUR_KEY-HERE"``` with your actual key, making sure to keep th
 
 ## **File Structure**
 
-text
-
+```text
 MCP_python_SDK/  
-├── README.md                 \# This file  
-├── protein\_db.json          \# Enhanced protein database  
-├── mcp\_basic\_server.py      \# Basic server (resources \+ tools)  
-├── mcp\_basic\_client.py      \# Basic client (debug-enabled)  
-├── mcp\_advanced\_server.py   \# Advanced server (streaming, sampling, prompts)
-└── mcp\_advanced\_client.py   \# Advanced client (OpenAI integration)
+├── README.md                 # This file  
+├── protein_db.json          # Enhanced protein database  
+├── mcp_basic_server.py      # Basic server (resources + tools)  
+├── mcp_basic_client.py      # Basic client (debug-enabled)  
+├── mcp_advanced_server.py   # Advanced server (streaming, sampling, prompts)
+└── mcp_advanced_client.py   # Advanced client (OpenAI integration)
+```
 
 ## **SDK Features Demonstrated**
 
 ### **Basic Server (mcp\_basic\_server.py)**
 
 * Resources: dataset://proteins, protein://{id}  
-* Tools: get\_protein\_function  
+* Tools: get_protein_function  
 * Transport: Streamable HTTP  
 * Error Handling: Proper MCP error responses
 
-### **Advanced Server (mcp\_advanced\_server.py)**
+### **Advanced Server (mcp_advanced_server.py)**
 
 * Notifications: Client registration and push updates  
 * Elicitation: Dynamic user clarification requests  
@@ -78,47 +78,51 @@ MCP_python_SDK/
 
 ### **Clients**
 
-* Basdksic Client: Simple resource and tool exploration  
+* Basic Client: Simple resource and tool exploration  
 * Advanced Client: Full-featured with OpenAI integration
 
 ## **Key SDK Benefits**
 
-### **1\. Protocol Compliance**
+### **1. Protocol Compliance**
 
-python
+```python
 
 from mcp.server.fastmcp import FastMCP
 
-mcp \= FastMCP("My Server")
+mcp = FastMCP("My Server")
 
-*\# Automatically handles JSON-RPC 2.0 compliance*
+# Automatically handles JSON-RPC 2.0 compliance
+```
 
-### **2\. Type Safety & Validation**
+### **2. Type Safety & Validation**
 
-python
+```python
 
 @mcp.tool()  
-def get\_protein\_function(protein\_id: str) \-\> str:  
-    *\# SDK validates input types and return values*
+def get_protein_function(protein_id: str) -> str:  
+    # SDK validates input types and return values
 
     return "Function description"
+```
 
-### **3\. Built-in Transport Support**
+### **3. Built-in Transport Support**
 
-python
+```python
 
-*\# HTTP, SSE, and STDIO out of the box*  
-app \= mcp.streamable\_http\_app()
+# HTTP, SSE, and STDIO out of the box*
+app = mcp.streamable_http_app()
 
-uvicorn.run(app, host\="0.0.0.0", port\=8501)
+uvicorn.run(app, host="0.0.0.0", port=8501)
+```
 
-### **4\. Progress Reporting**
+### **4. Progress Reporting**
 
-python
+```python
 
-async def stream\_analysis(ctx: Context):
+async def stream_analysis(ctx: Context):
 
-    await ctx.report\_progress(progress\=50, total\=100, message\="Processing...")
+    await ctx.report_progress(progress=50, total=100, message="Processing...")
+```
 
 ## **Comparison with Custom Implementation**
 
@@ -134,45 +138,48 @@ async def stream\_analysis(ctx: Context):
 
 ### **Streaming with Progress**
 
-python
+```python
 
 @mcp.tool()  
-async def stream\_analysis(protein\_id: str, ctx: Context):  
+async def stream_analysis(protein_id: str, ctx: Context):  
     for i, step in enumerate(steps):  
-        await ctx.report\_progress(progress\=i, total\=len(steps), message\=step)
+        await ctx.report_progress(progress=i, total=len(steps), message=step)
 
         await asyncio.sleep(0.3)
+```
 
 ### **Sampling with LLM Integration**
 
-python
+```python
 
-*\# Server provides prompt*  
-result \= await session.call\_tool("generate\_hypothesis", {"protein\_id": "P53\_HUMAN"})
+# Server provides prompt* 
+result = await session.call_tool("generate_hypothesis", {"protein_id": "P53_HUMAN"})
 
-*\# Client uses OpenAI to complete*  
-completion \= llm\_client.chat.completions.create(  
-    model\="gpt-3.5-turbo",   
-    messages\=\[{"role": "user", "content": prompt}\]
+# Client uses OpenAI to complete*  
+completion = llm_client.chat.completions.create(  
+    model="gpt-3.5-turbo",   
+    messages=[{"role": "user", "content": prompt}]
 
 )
+```
 
 ### **Elicitation Pattern**
 
-python
+```python
 
 @mcp.tool()  
-def find\_protein(protein\_name: str):  
-    if protein\_name \== "p53":  
+def find_protein(protein_name: str):  
+    if protein_name == "p53":  
         return json.dumps({  
-            "result\_type": "elicitation",  
+            "result_type": "elicitation",  
             "message": "Multiple matches found",  
-            "choices": \[  
-                {"label": "Human p53", "value": "P53\_HUMAN"},  
-                {"label": "Mouse p53", "value": "P53\_MOUSE"}  
-            \]
+            "choices": [  
+                {"label": "Human p53", "value": "P53_HUMAN"},  
+                {"label": "Mouse p53", "value": "P53_MOUSE"}  
+            ]
 
         })
+```
 
 ## **Debugging Tips**
 
@@ -180,54 +187,23 @@ def find\_protein(protein\_name: str):
 
 The basic client includes comprehensive debug output:
 
-python
+```python
 
-def content\_to\_text(obj: Any) \-\> str:  
+def content_to_text(obj: Any) -> str:  
     """Convert SDK content variants to printable text"""
 
-    *\# Handles TextContent, BlobContent, and errors*
+    # Handles TextContent, BlobContent, and errors
+```
 
 ### **Check Server Logs**
 
-bash
+```bash
 
-*\# Server shows all MCP method calls*
+# Server shows all MCP method calls
 
-python mcp\_basic\_server.py
 
-### **Environment Variables**
-
-bash
-
-*\# For advanced features*  
-export OPENAI\_API\_KEY="your-key-here"
-
-export MCP\_SERVER\_URL="http://localhost:8501/mcp"
-
-## **Deployment**
-
-### **Production Server**
-
-python
-
-import uvicorn  
-from mcp\_basic\_server import app
-
-if \_\_name\_\_ \== "\_\_main\_\_":
-
-    uvicorn.run(app, host\="0.0.0.0", port\=8501, log\_level\="info")
-
-### **Docker Deployment**
-
-dockerfile
-
-FROM python:3.11  
-WORKDIR /app  
-COPY requirements.txt .  
-RUN pip install \-r requirements.txt  
-COPY . .
-
-CMD \["python", "mcp\_advanced\_server.py"\]
+python mcp_basic_server.py
+```
 
 ## **Learning Resources**
 
@@ -248,7 +224,7 @@ This implementation demonstrates MCP best practices. Feel free to:
 
 ### **Common Issues**
 
-1. Port already in use: Change port in server or use lsof \-ti:8501 | xargs kill  
+1. Port already in use: Change port in server or use ```lsof -ti:8501 | xargs kill```  
 2. OpenAI API errors: Verify API key and quota  
 3. Import errors: Ensure MCP SDK is installed: pip install mcp
 
@@ -260,4 +236,4 @@ This implementation demonstrates MCP best practices. Feel free to:
 
 ---
 
-Happy Building with MCP\!
+Happy Building with MCP!
