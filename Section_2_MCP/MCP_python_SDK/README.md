@@ -1,6 +1,6 @@
 # **MCP Workshop \- Official SDK Implementation**
 
-This directory contains production-ready MCP servers and clients built using the official Model Context Protocol Python SDK.
+This directory contains MCP servers and clients built using the official Model Context Protocol Python SDK.
 
 ## **Quick Start**
 
@@ -34,7 +34,7 @@ Replace ```"PASTE-YOUR_KEY-HERE"``` with your actual key, making sure to keep th
 5.  Start the server in the same terminal:
 
     ```bash
-    python MCP_scratch/advanced_server.py
+    python MCP_python_SDK/advanced_server.py
     ```
 
     Keep this terminal open.  **Do not disconnect it.**
