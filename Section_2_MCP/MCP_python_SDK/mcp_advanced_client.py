@@ -18,10 +18,10 @@ SERVER_URL = "http://localhost:8501/mcp"
 openai_api_key = os.getenv("OPENAI_API_KEY")
 if openai_api_key:
     llm_client = OpenAI(api_key=openai_api_key)
-    print("✅ OpenAI client initialized")
+    print("OpenAI client initialized")
 else:
     llm_client = None
-    print("❌ OPENAI_API_KEY not found. Sampling demo will be skipped.")
+    print("OPENAI_API_KEY not found. Sampling demo will be skipped.")
 
 def extract_json_from_result(result: Any) -> str:
     """Extract the actual result text from MCP response."""
@@ -60,7 +60,7 @@ async def handle_elicitation(result) -> str:
             print(f"Auto-selecting: {selected}")
             return selected
     except json.JSONDecodeError as e:
-        print(f"❌ Error parsing elicitation response: {e}")
+        print(f"Error parsing elicitation response: {e}")
         print(f"Raw response: {result_text}")
     
     return None
@@ -72,16 +72,16 @@ async def handle_sampling(result, session: ClientSession) -> None:
     try:
         data = json.loads(result_text)
         if data.get("result_type") == "sampling":
-            print(f"\n🎯 Sampling Request:")
+            print(f"\nSampling Request:")
             print(f"Prompt: {data['prompt']}")
             
             if not llm_client:
-                print("❌ Skipping LLM call - OpenAI client not available")
+                print("Skipping LLM call - OpenAI client not available")
                 return
             
             try:
                 # Call OpenAI API with the prompt from the server
-                print("🔄 Calling OpenAI API...")
+                print("Calling OpenAI API...")
                 completion = llm_client.chat.completions.create(
                     model="gpt-3.5-turbo",  # or "gpt-4" if you have access
                     messages=[
@@ -93,10 +93,10 @@ async def handle_sampling(result, session: ClientSession) -> None:
                 )
                 
                 llm_result = completion.choices[0].message.content
-                print(f"🤖 LLM Response: {llm_result}")
+                print(f"LLM Response: {llm_result}")
                 
                 # Submit the result back to the server
-                print("📤 Submitting result to server...")
+                print("Submitting result to server...")
                 submit_result = await session.call_tool(
                     "submit_sampling_result",
                     arguments={
@@ -108,19 +108,19 @@ async def handle_sampling(result, session: ClientSession) -> None:
                 submit_text = extract_json_from_result(submit_result)
                 submit_data = json.loads(submit_text)
                 if submit_data.get("status") == "success":
-                    print(f"✅ Sampling result successfully submitted for protein {submit_data.get('protein_id')}")
+                    print(f"Sampling result successfully submitted for protein {submit_data.get('protein_id')}")
                 else:
-                    print(f"❌ Failed to submit sampling result: {submit_text}")
+                    print(f"Failed to submit sampling result: {submit_text}")
                     
             except Exception as e:
-                print(f"❌ Error calling OpenAI API: {e}")
+                print(f"Error calling OpenAI API: {e}")
                 
     except json.JSONDecodeError as e:
-        print(f"❌ Error parsing sampling response: {e}")
+        print(f"Error parsing sampling response: {e}")
         print(f"Raw response: {result_text}")
 
 async def main() -> None:
-    print(f"🔗 Connecting to advanced MCP server: {SERVER_URL}")
+    print(f"Connecting to advanced MCP server: {SERVER_URL}")
     
     async with streamablehttp_client(SERVER_URL) as (read_stream, write_stream, _):
         async with ClientSession(read_stream, write_stream) as session:
@@ -178,8 +178,8 @@ async def main() -> None:
                 
                 await handle_sampling(sampling_result, session)
             else:
-                print("❌ Skipping sampling demo - OpenAI API key not configured")
-                print("💡 Set OPENAI_API_KEY in your .env file to enable this feature")
+                print("Skipping sampling demo - OpenAI API key not configured")
+                print("Set OPENAI_API_KEY in your .env file to enable this feature")
             
             # Demo 4: Streaming example
             print("\n" + "="*50)
