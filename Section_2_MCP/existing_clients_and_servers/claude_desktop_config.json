@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "advanced-protein-research": {
+      "command": "<ADD YOUR FULL PATH HERE>/Section_2_MCP/.venv/bin/python3",
+      "args": [
+        "<ADD YOUR FULL PATH HERE>/Section_2_MCP/existing_clients_and_servers/claude_mcp_advanced_server.py"
+      ]
+    },
+    "basic-protein-research": {
+      "command": "<ADD YOUR FULL PATH HERE>/Section_2_MCP/.venv/bin/python3",
+      "args": [
+        "<ADD YOUR FULL PATH HERE>/Section_2_MCP/existing_clients_and_servers/claude_mcp_basic_server.py"
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "P53_HUMAN": {
+    "name": "Cellular tumor antigen p53",
+    "organism": "Homo sapiens (Human)",
+    "function": "Acts as a tumor suppressor; regulates cell cycle and apoptosis.",
+    "log": [
+      "Initializing analysis...",
+      "Sequence loaded (393 aa)",
+      "Detecting domains...",
+      "Transactivation domain found (aa 1-42)",
+      "DNA-binding domain found (aa 102-292)",
+      "Tetramerization domain found (aa 323-356)",
+      "Searching for variants...",
+      "Site R248Q found",
+      "Generating report...",
+      "Analysis complete."
+    ]
+  },
+  "P53_MOUSE": {
+    "name": "Cellular tumor antigen p53",
+    "organism": "Mus musculus (Mouse)",
+    "function": "Transcription regulation; response to DNA damage and apoptosis.",
+    "log": [
+      "Initializing analysis...",
+      "Sequence loaded (388 aa)",
+      "DNA-binding domain verified",
+      "No pathogenic variants detected",
+      "Analysis complete."
+    ]
+  },
+  "P0DTC2": {
+    "name": "ORF1ab polyprotein",
+    "organism": "SARS-CoV-2",
+    "function": "Viral replication and transcription; polyprotein precursor.",
+    "log": [
+      "Initializing analysis...",
+      "Polyprotein cleavage map loaded",
+      "NSP12 polymerase active site mapped",
+      "Analysis complete."
+    ]
+  }
+}
