@@ -1,16 +1,4 @@
 # SciLifeLab Workshop: LangGraph AI Agents for Drug Discovery
-
-## Extension Ideas (NEED HELP !!!)
-
-### Some ideas (haven't implemented ye)
-
-1. **Custom Nodes**: Create specialized processing nodes
-2. **Custom Tools**: Create several tools, i.e. Protein Structure Tools, Patent Search, Clinical Trial Tools, Regulatory DB
-3. **Structured Output**: use output class from pydantic base model to structure the output of agents
-4. **Multi-Agent Systems**: Coordinate multiple specialized agents
-5. **Long-term memoery**: Add long-term smemory
-
-
 ---
 
 A comprehensive hands-on workshop teaching participants how to build AI agents using LangGraph, specifically focused on drug discovery applications.
@@ -35,7 +23,6 @@ By the end of this workshop, participants will:
 workshop/
 ├── README.md                 # This comprehensive guide
 ├── requirements.txt          # Python dependencies
-├── agent_demo.py            # Complete working demo implementation
 ├── lab_1.ipynb             # Main workshop notebook (exercises)
 ├── answers_1.ipynb         # Solution notebook with completed code
 ├── images/                 # Workshop assets
@@ -73,24 +60,5 @@ workshop/
 - **Best Practices**: Proper Python coding standards and documentation
 - **Testing Ready**: Includes visualization and interaction loops
 
-### agent_demo.py (Production Example)
-
-**Features**:
-- **Complete Implementation**: Full ReAct agent with all three tools
-- **Production Ready**: Comprehensive error handling and logging
-- **Interactive**: Command-line interface with streaming responses
-- **Configurable**: Thread-based memory management
-- **Extensible**: Easy to add new tools and modify behavior
-
-## API Dependencies & External Services
-
-### LitSense API
-- **Reference**: [LitSense NAR 2025](https://academic.oup.com/nar/article/53/W1/W361/8133630)
-
-### ChEMBL Web Services
-- **Documentation**: [ChEMBL Interface Docs](https://chembl.gitbook.io/chembl-interface-documentation/web-services)
-
-### OpenAI API (Will be replaced by SciLifeLab server)
-- **Integration**: LangChain ChatOpenAI wrapper
 
 
