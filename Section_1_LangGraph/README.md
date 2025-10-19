@@ -1,7 +1,7 @@
 # SciLifeLab Workshop: LangGraph AI Agents for Drug Discovery
 ---
 
-A comprehensive hands-on workshop teaching participants how to build AI agents using LangGraph, specifically focused on drug discovery applications.
+A comprehensive hands-on workshop tutoring participants how to build AI agents using LangGraph, specifically focused on drug discovery applications.
 
 ## Workshop Overview
 
