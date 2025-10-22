@@ -6,24 +6,20 @@ This directory contains MCP servers and clients built using the official Model C
 
 ### Run the Server and Client
 
-1.  Open a terminal and navigate to the project directory:
+1. Ensure that all required dependencies are installed correctly. For detailed setup instructions, see ```SciLifeLab_agent_workshop/README.md```
+
+2.  Open a terminal and navigate to the project directory:
 
     ```bash
     cd Section_2_MCP/
     ```
 
-2.  Create and activate a virtual environment:
+3.  Activate the virtual environment if it is deactivated (see step 1 for details):
 
     ```bash
-    python3 -m venv .venv
-    source .venv/bin/activate
+    source ../.venv/bin/activate
     ```
 
-3.  Install the required dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
 4.  Provide the correct API key that was sent to you via email in the ```MCP_python_SDK/.env``` file.
 Replace ```"PASTE-YOUR_KEY-HERE"``` with your actual key, making sure to keep the double quotes.
 
@@ -61,7 +57,7 @@ MCP_python_SDK/
 
 ## **SDK Features Demonstrated**
 
-### **Basic Server (mcp\_basic\_server.py)**
+### **Basic Server (mcp_basic_server.py)**
 
 * Resources: dataset://proteins, protein://{id}  
 * Tools: get_protein_function  
