@@ -21,10 +21,11 @@ By the end of this workshop, participants will:
 
 ```
 workshop/
-├── README.md                 # This comprehensive guide
-├── requirements.txt          # Python dependencies
+├── README.md               # This comprehensive guide
+├── requirements.txt        # Python dependencies
 ├── lab_1.ipynb             # Main workshop notebook (exercises)
 ├── answers_1.ipynb         # Solution notebook with completed code
+├── .env                    # environment files (contain your API keys)
 ├── images/                 # Workshop assets
 ```
 
