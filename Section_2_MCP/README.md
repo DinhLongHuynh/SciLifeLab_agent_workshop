@@ -1,8 +1,8 @@
-# MCP Workshop
+# SciLifeLab Workshop: Agentic AI for Life Science, Hands on Session 2
 
-This workshop provides three different approaches to understanding and implementing the Model Context Protocol (MCP).
+This session provides three different approaches to understanding and implementing the Model Context Protocol (MCP).
 
-## Workshop Structure
+## Structure
 
 ### 1. `MCP_scratch/` - Learn MCP From First Principles
 - Build MCP servers and clients from scratch using Flask and REST APIs
@@ -15,10 +15,8 @@ This workshop provides three different approaches to understanding and implement
 - Includes advanced features like streaming and sampling
 
 ### 3. `existing_clients_and_servers/` - Connect Existing MCP Tools
-- Examples for connecting to official MCP clients like Claude Desktop
+- Examples for connecting to official MCP clients
 - Configuration files and setup guides
-- Integration patterns for real AI assistants
-- Pre-built server configurations
 
 ## Important Setup
 

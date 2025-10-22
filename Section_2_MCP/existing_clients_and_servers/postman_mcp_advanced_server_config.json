@@ -1,0 +1,8 @@
+{
+    "advanced-protein-research": {
+      "command": "/Users/mahal497/0_projects/SciLifeLab_agent_workshop/.venv/bin/python3",
+      "args": [
+        "/Users/mahal497/0_projects/SciLifeLab_agent_workshop/Section_2_MCP/existing_clients_and_servers/postman_mcp_advanced_server.py"
+      ]
+    }
+}
