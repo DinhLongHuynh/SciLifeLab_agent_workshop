@@ -7,26 +7,23 @@ Presentation: [PowerPoint](https://1drv.ms/p/c/edc89288e35ae05d/EUIjZr76uqJOnr3y
 
 Make sure your environment is ready before you begin:
 
-## 1. Clone Github repo: 
+## 1. Open a terminal and clone Github repo: 
 ```bash
-git clone "Official Repo from SciLifeLab"
-cd "Official Repo from SciLifeLab"
+git clone git clone https://github.com/DinhLongHuynh/SciLifeLab_agent_workshop
 ```
 
-## 2. Create a Python Environment
-
+## 2. Navigate to the project directory:
 ```bash
-conda create --name agent_workshop python=3.11
+cd SciLifeLab_agent_workshop
 ```
 
-## 3. Activate the Environment
-
+## 3. Create and activate a virtual environment:
 ```bash
-conda activate agent_workshop
-```
-
-## 4. Install Dependencies
-
+python3 -m venv .venv
+source .venv/bin/activate
+ ```
+    
+## 4. Install the required dependencies:
 ```bash
 pip install -r requirements.txt
 ```
