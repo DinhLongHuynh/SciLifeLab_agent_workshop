@@ -1,4 +1,4 @@
-# AI Agents in Life Science: Hands on Session 2 - AI agent collaboration with the Model Context Protocol (MCP)
+# AI Agents in Life Sciences: Hands on Session 2 - AI agent collaboration with the Model Context Protocol (MCP)
 
 # **MCP Workshop - Official SDK Implementation**
 
