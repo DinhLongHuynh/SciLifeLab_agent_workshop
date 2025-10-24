@@ -32,7 +32,7 @@ Replace ```"PASTE-YOUR_KEY-HERE"``` with your actual key, making sure to keep th
 5.  Start the server in the same terminal:
 
     ```bash
-    python MCP_python_SDK/advanced_server.py
+    python MCP_python_SDK/mcp_advanced_server.py
     ```
 
     Keep this terminal open.  **Do not disconnect it.**
@@ -40,7 +40,7 @@ Replace ```"PASTE-YOUR_KEY-HERE"``` with your actual key, making sure to keep th
 6.  Open another terminal and run the client:
 
     ```bash
-    python MCP_python_SDK/advanced_client.py
+    python MCP_python_SDK/mcp_advanced_client.py
     ```
 
 7.  Observe the output in both terminals to see the communication flow.
