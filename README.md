@@ -9,7 +9,7 @@ Make sure your environment is ready before you begin:
 
 ## 1. Open a terminal and clone Github repo: 
 ```bash
-git clone git clone https://github.com/DinhLongHuynh/SciLifeLab_agent_workshop
+git clone https://github.com/DinhLongHuynh/SciLifeLab_agent_workshop
 ```
 
 ## 2. Navigate to the project directory:
