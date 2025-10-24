@@ -1,0 +1,22 @@
+{
+  "P53_HUMAN": {
+    "name": 
+    "Cellular tumor antigen p53", 
+    "organism": "Homo sapiens", 
+    "function": "Acts as a tumor suppressor.", 
+    "log": "Initializing analysis...\nSequence loaded...\nChecking for known mutation sites...\nSite R248Q found...\nGenerating report...\nAnalysis complete."
+    },
+
+  "P53_MOUSE": {
+    "name": "Cellular tumor antigen p53", 
+    "organism": "Mus musculus", 
+    "function": "Key regulator of cell cycle and apoptosis.", 
+    "log": "Initializing analysis...\nSequence loaded...\nNo known mutation sites found...\nAnalysis complete."
+    },
+
+  "P0DTC2": {
+    "name": "Spike glycoprotein", 
+    "organism": "SARS-CoV-2", 
+    "function": "Mediates entry into host cells.", 
+    "log": "Initializing analysis...\nSequence loaded...\nChecking for known mutation sites...\nSite D614G found...\nGenerating report...\nAnalysis complete."}
+}
