@@ -1,6 +1,6 @@
 # AI Agents in Life Sciences: Hands-on Session 2 - AI agent collaboration with the Model Context Protocol (MCP)
 
-Welcome! This Jupyter Notebook provides a complete, hands-on guide to the Model Context Protocol (MCP). It is designed to teach you the fundamentals from first principles, starting with core theory and moving directly into practical, "from-scratch" implementations.
+Welcome! The **`mcp_workshop.ipynb`** Jupyter Notebook provides a complete, hands-on guide to the Model Context Protocol (MCP). It is designed to teach you the fundamentals from first principles, starting with core theory and moving directly into practical, "from-scratch" implementations.
 
 By the end of this notebook, you will have built and tested your own basic and advanced MCP servers and clients using Python, Flask, and REST APIs.
 
