@@ -28,4 +28,15 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## 5. Start Jupyter Notebook:
+```bash
+jupyter notebook
+```
 
+You can now start exploring and using the notebooks located in the following directories:
+
+`SciLifeLab_agent_workshop/Section_1_LangGraph/`
+
+`SciLifeLab_agent_workshop/Section_2_MCP/MCP_scratch/`
+
+Happy learning! 😊
