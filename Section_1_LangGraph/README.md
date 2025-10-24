@@ -5,7 +5,7 @@ A comprehensive hands-on workshop tutoring participants how to build AI agents u
 
 ## Workshop Overview
 
-This 70-minute interactive workshop introduces participants to **LangGraph**, a low-level orchestration framework for constructing stateful AI workflows using graphs. Participants will learn to build AI agents that can perform mathematical calculations, search scientific literature, and query drug databases.
+This 75-minute interactive workshop introduces participants to **LangGraph**, a low-level orchestration framework for constructing stateful AI workflows using graphs. Participants will learn to build AI agents that can perform mathematical calculations, search scientific literature, and query drug databases.
 
 ### Learning Objectives
 
@@ -23,13 +23,14 @@ By the end of this workshop, participants will:
 workshop/
 ├── README.md               # This comprehensive guide
 ├── requirements.txt        # Python dependencies
-├── lab_1.ipynb             # Main workshop notebook (exercises)
-├── answers_1.ipynb         # Solution notebook with completed code
+├── langgraph_lab.ipynb     # Main workshop notebook (exercises)
+├── langgraph_answer.ipynb  # Solution notebook with completed code
 ├── .env                    # environment files (contain your API keys)
 ├── images/                 # Workshop assets
+├── utils/                  # Several useful functions
 ```
 
-## Workshop Timeline (70 minutes)
+## Workshop Timeline (75 minutes)
 
 | Part | Duration | Topic | Key Concepts |
 |------|----------|-------|--------------|
@@ -45,7 +46,7 @@ workshop/
 
 ## Detailed Notebook Content
 
-### lab_1.ipynb (Workshop Exercises)
+### langgraph_lab.ipynb (Workshop Exercises)
 
 **Structure**: 8 parts with progressive complexity
 - **Interactive Design**: TODO sections for hands-on coding
@@ -53,13 +54,10 @@ workshop/
 - **Domain Focus**: Drug discovery use cases throughout
 - **Progressive Complexity**: From simple tools to complete agent systems
 
-### answers_1.ipynb (Complete Solutions)
+### langgraph_answer.ipynb (Complete Solutions)
 
 **Purpose**: Reference implementation with all exercises completed
 - **Full Code**: Working solutions for all TODO sections  
 - **Error Handling**: Robust implementations with try-catch blocks
 - **Best Practices**: Proper Python coding standards and documentation
 - **Testing Ready**: Includes visualization and interaction loops
-
-
-

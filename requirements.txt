@@ -8,7 +8,6 @@ python-dotenv>=1.0.0
 typing-extensions>=4.0.0
 
 # Domain-specific tools for drug discovery
-litsense-wrapper>=0.1.0
 chembl-webresource-client>=0.10.0
 pydantic>=2.0.0
 
