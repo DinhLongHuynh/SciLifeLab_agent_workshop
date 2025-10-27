@@ -1,6 +1,6 @@
 # SciLifeLab Workshop: AI Agents in Life Sciences
 
-Presentation: [PowerPoint](https://1drv.ms/p/c/edc89288e35ae05d/EUIjZr76uqJOnr3y6P5ne6oBuKVCs968mVo5S7tJvrEt1w)
+Presentation: [PowerPoint](https://1drv.ms/p/c/edc89288e35ae05d/EUIjZr76uqJOnr3y6P5ne6oBkhO95rPaLm68aHsvmyCVew)
 
 
 # Setup Before the Workshop
