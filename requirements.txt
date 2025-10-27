@@ -1,10 +1,9 @@
 # LangGraph ReAct Demo Requirements
 # Core LangGraph and LangChain dependencies
-langgraph>=0.1.0
-langchain>=0.1.0
-langchain-core>=0.1.0
-langchain-openai>=0.1.0
-python-dotenv>=1.0.0
+langgraph==0.6.3
+langchain==0.3.24
+langchain-core==0.3.76
+langchain-openai==0.3.33
 typing-extensions>=4.0.0
 
 # Domain-specific tools for drug discovery
@@ -27,7 +26,7 @@ flask==3.1.2
 mcp==1.16.0
 
 # OpenAI client
-openai==2.2.0
+openai>=1.104.2
 
 # Environment variables
 python-dotenv==1.1.1
