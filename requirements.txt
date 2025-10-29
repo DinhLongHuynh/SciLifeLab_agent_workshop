@@ -1,9 +1,9 @@
 # LangGraph ReAct Demo Requirements
 # Core LangGraph and LangChain dependencies
-langgraph==0.6.3
-langchain==0.3.24
-langchain-core==0.3.76
-langchain-openai==0.3.33
+langgraph>=0.6.3
+langchain>=0.3.24
+langchain-core>=0.3.76
+langchain-openai>=0.3.33
 typing-extensions>=4.0.0
 
 # Domain-specific tools for drug discovery
