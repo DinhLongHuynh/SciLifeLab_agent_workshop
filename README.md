@@ -25,7 +25,7 @@ source .venv/bin/activate
     
 ## 4. Install the required dependencies:
 ```bash
-pip install -r requirements.txt
+pip install -U -r requirements.txt
 ```
 
 ## 5. Start Jupyter Notebook:
