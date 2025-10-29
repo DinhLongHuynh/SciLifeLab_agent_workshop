@@ -34,7 +34,7 @@ pip install -r requirements.txt
 python -m ipykernel install --user --name=SciLifeLab_venv --display-name="SciLifeLab_workshop_kernel"
 ```
 
-## 6. Start Jupyter Notebook:
+## 6. Start Jupyter notebook:
 ```bash
 jupyter notebook
 ```
@@ -45,7 +45,7 @@ jupyter notebook
 
 `SciLifeLab_agent_workshop/Section_2_MCP/MCP_scratch/`
 
-## 8. In the Jupyter notebook, go to the top-right corner to change the kernel:
+## 8. From the top-right corner of the Jupyter notebook, select and change the kernel:
 
 **Example:** `SciLifeLab_agent_workshop/Section_1_LangGraph/langgraph_lab.ipynb`
 
