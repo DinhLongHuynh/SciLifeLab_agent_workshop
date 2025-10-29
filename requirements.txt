@@ -1,23 +1,23 @@
 # LangGraph ReAct Demo Requirements
 # Core LangGraph and LangChain dependencies
-langgraph>=0.6.3
-langchain>=0.3.24
-langchain-core>=0.3.76
-langchain-openai>=0.3.33
-typing-extensions>=4.0.0
+langgraph==1.0.1
+langchain==1.0.2
+langchain-core==1.0.1
+langchain-openai==1.0.1
+typing-extensions==4.15.0
 
 # Domain-specific tools for drug discovery
-chembl-webresource-client>=0.10.0
-pydantic>=2.0.0
+chembl-webresource-client==0.10.9
+pydantic==2.12.3
 
 # Jupyter notebook support
-ipython>=8.0.0
-jupyter>=1.0.0
-ipywidgets>=8.0.0
+ipython==9.6.0
+jupyter==1.1.1
+ipywidgets==8.1.7
 
 # Optional dependencies for enhanced functionality
-requests>=2.28.0
-tqdm>=4.64.0
+requests==2.32.5
+tqdm==4.67.1
 
 # Web framework
 flask==3.1.2
