@@ -49,7 +49,7 @@ jupyter notebook
 
 **Example:** `SciLifeLab_agent_workshop/Section_1_LangGraph/langgraph_lab.ipynb`
 
-Click `Python 3 (ipykernel)` → select `Select kernel for: langgraph_lab.ipynb` → from the drop-down menu, choose `SciLifeLab_workshop_kernel`
+click `Python 3 (ipykernel)` → select `Select kernel for: "langgraph_lab.ipynb"` → from the drop-down menu, choose `SciLifeLab_workshop_kernel` → check `Always start the preferred kernel` → click `Select`
 
 ---
 
