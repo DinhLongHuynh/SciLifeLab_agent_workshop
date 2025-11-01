@@ -30,20 +30,6 @@ workshop/
 ├── utils/                  # Several useful functions
 ```
 
-## Workshop Timeline (75 minutes)
-
-| Part | Duration | Topic | Key Concepts |
-|------|----------|-------|--------------|
-| **Part 1** | 10 min | Setup & Imports | Environment setup, dependency loading |
-| **Part 2** | 20 min | Understanding & Creating Tools | `@tool` decorator, function design, API integration |
-| **Part 3** | 10 min | Defining State | TypedDict, state management, reducers |
-| **Part 4** | 20 min | Building Agent Graph | Nodes, edges, routing, graph compilation |
-| **Part 5** | 10 min | Testing the Agent | Interactive loops, streaming responses |
-| **Part 6** | 10 min | Adding Memory | Checkpointers, thread management, persistent state |
-| **Part 7** | 10 min | Prebuilt Agents | ReAct pattern, comparison with custom graphs |
-| **Part 8** | Optional | Extension Exercises | Advanced features, error handling |
-
-
 ## Detailed Notebook Content
 
 ### langgraph_lab.ipynb (Workshop Exercises)
