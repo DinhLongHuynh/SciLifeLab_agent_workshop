@@ -18,39 +18,61 @@ git clone https://github.com/DinhLongHuynh/SciLifeLab_agent_workshop
 cd SciLifeLab_agent_workshop
 ```
 
-## 3. Create and activate a virtual environment:
+## Option 1: Run workshop in Docker
+Requires Makefile support and Docker engine on your machine.  
+If you don't have Makefile support on your machine, you can type the commands in the `Makefile` by hand.
+### 1. Build the image
+```bash
+make build
+```
+### 2. Start Jupyter
+```bash
+make run-jupyter-lab
+```
+and then access the `localhost:port` address printed in the terminal in your browser.
+
+or to start a separate shell (needed for some experiments in the workshop, keep `make run-jupyter-lab`
+running in the background):
+```bash
+make run-shell
+```
+and then `cd /repo` to find the source code.
+
+## Option 2: Run workshop natively
+
+### 1. Create and activate a virtual environment:
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
  ```
     
-## 4. Install the required dependencies:
+### 2. Install the required dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-## 5. Register your virtual environment as a Jupyter kernel:
+### 3. Register your virtual environment as a Jupyter kernel:
 
 ```bash
 python -m ipykernel install --user --name=SciLifeLab_venv --display-name="SciLifeLab_workshop_kernel"
 ```
 
-## 6. Start Jupyter notebook:
+### 4. Start Jupyter notebook:
 ```bash
 jupyter notebook
 ```
 
-## 7. You can find the notebooks in the following directories:
-
-`SciLifeLab_agent_workshop/Section_1_LangGraph/`
-
-`SciLifeLab_agent_workshop/Section_2_MCP/MCP_scratch/`
-
-## 8. From the top-right corner of the Jupyter notebook, select and change the kernel:
+### 5. From the top-right corner of the Jupyter notebook, select and change the kernel:
 
 **Example:** `SciLifeLab_agent_workshop/Section_1_LangGraph/langgraph_lab.ipynb`
 
 click `Python 3 (ipykernel)` → select `Select kernel for: "langgraph_lab.ipynb"` → from the drop-down menu, choose `SciLifeLab_workshop_kernel` → check `Always start the preferred kernel` → click `Select`
+
+## You can find the notebooks in the following directories:
+
+`SciLifeLab_agent_workshop/Section_1_LangGraph/`
+
+`SciLifeLab_agent_workshop/Section_2_MCP/MCP_scratch/`
 
 ---
 
