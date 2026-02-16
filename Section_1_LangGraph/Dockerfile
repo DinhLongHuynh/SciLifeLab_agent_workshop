@@ -26,5 +26,5 @@ COPY . /workspace
 
 EXPOSE 8888
 
-# Keep token auth enabled by default; set JUPYTER_TOKEN in docker run if desired.
-CMD ["sh", "-c", "jupyter lab --ip=0.0.0.0 --port=${JUPYTER_PORT} --no-browser --allow-root --ServerApp.token=${JUPYTER_TOKEN:-workshop-token} --ServerApp.allow_origin='*'"]
+# Disable Jupyter auth for local workshop convenience.
+CMD ["sh", "-c", "jupyter lab --ip=0.0.0.0 --port=${JUPYTER_PORT} --no-browser --allow-root --ServerApp.token='' --ServerApp.password='' --ServerApp.allow_origin='*'"]
