@@ -26,8 +26,8 @@ class LitSense_API:
     def retrieve(
         self,
         query_str: str,
-        rerank: bool = False,
-        limit: int = 10,
+        rerank: bool = True,
+        limit: int = 20,
         min_score: Optional[float] = None,
         mode: str = 'passages'
     ) -> list[LitSenseObject]:
