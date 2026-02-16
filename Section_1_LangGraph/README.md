@@ -1,4 +1,5 @@
 # SciLifeLab Workshop: LangGraph AI Agents for Drug Discovery
+
 ---
 
 A comprehensive hands-on workshop tutoring participants how to build AI agents using LangGraph, specifically focused on drug discovery applications.
@@ -10,6 +11,7 @@ This 75-minute interactive workshop introduces participants to **LangGraph**, a 
 ### Learning Objectives
 
 By the end of this workshop, participants will:
+
 - Understand core concepts of LangGraph (tools, nodes, edges, state, and memory)
 - Create and integrate custom tools for AI agents
 - Build a ReAct-style agent from scratch using LLMs and custom tools
@@ -30,11 +32,36 @@ workshop/
 ├── utils/                  # Several useful functions
 ```
 
+## Getting Started
+
+**Change directory to Section 1**
+
+```bash
+cd Section_1_LangGraph
+```
+
+**Build Docker Image**
+
+```bash
+docker build -t scilifelab-langgraph-jupyter .
+```
+
+**Run Docker container**
+
+```bash
+docker run --rm -it -p 8888:8888 -v "$(pwd)":/workspace  \--env-file .env scilifelab-langgraph-jupyter
+```
+
+**Access and practice** 
+
+Go to localhost:8888 on your browser and starting the lab
+
 ## Detailed Notebook Content
 
 ### langgraph_lab.ipynb (Workshop Exercises)
 
 **Structure**: 8 parts with progressive complexity
+
 - **Interactive Design**: TODO sections for hands-on coding
 - **Guided Learning**: Step-by-step instructions with code templates
 - **Domain Focus**: Drug discovery use cases throughout
@@ -43,7 +70,8 @@ workshop/
 ### langgraph_answer.ipynb (Complete Solutions)
 
 **Purpose**: Reference implementation with all exercises completed
-- **Full Code**: Working solutions for all TODO sections  
+
+- **Full Code**: Working solutions for all TODO sections
 - **Error Handling**: Robust implementations with try-catch blocks
 - **Best Practices**: Proper Python coding standards and documentation
 - **Testing Ready**: Includes visualization and interaction loops
