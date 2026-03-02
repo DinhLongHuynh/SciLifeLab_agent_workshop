@@ -60,7 +60,7 @@ Go to localhost:8888 on your browser and starting the lab
 
 ### langgraph_lab.ipynb (Workshop Exercises)
 
-**Structure**: 8 parts with progressive complexity
+**Structure**: 9 parts with progressive complexity
 
 - **Interactive Design**: TODO sections for hands-on coding
 - **Guided Learning**: Step-by-step instructions with code templates
