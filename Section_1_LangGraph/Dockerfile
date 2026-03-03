@@ -1,13 +1,16 @@
 FROM python:3.13-slim
 
+ENV DEBIAN_FRONTEND=noninteractive
+ENV USER=workshop
+ENV HOME=/home/$USER
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    PIP_NO_CACHE_DIR=1 \
-    JUPYTER_PORT=8888
+    PIP_NO_CACHE_DIR=1 
 
-WORKDIR /workspace
+# Create non-root user with uid 1000 (required by SciLifeLab Serve)
+RUN useradd -m -u 1000 $USER
 
-# Native libs commonly needed by scientific Python wheels (including rdkit).
+# System dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     ca-certificates \
@@ -19,12 +22,28 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxrender1 \
     && rm -rf /var/lib/apt/lists/*
 
+# Python packages
 COPY requirements.txt /tmp/requirements.txt
-RUN pip install --upgrade pip && pip install -r /tmp/requirements.txt
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r /tmp/requirements.txt \
+    && rm /tmp/requirements.txt
 
-COPY . /workspace
+# Set working directory
+WORKDIR $HOME/app
 
+# Workshop content
+COPY ./ $HOME/app
+
+# .env placeholder
+RUN echo '# Set OPENAI_API_KEY via docker run -e OPENAI_API_KEY="sk-..."' > $HOME/app/.env
+
+# Start script (required by SciLifeLab Serve)
+RUN chmod +x $HOME/app/start-script.sh
+
+# Fix ownership for non-root user
+RUN chown -R $USER:$USER $HOME
+
+USER $USER
 EXPOSE 8888
 
-# Disable Jupyter auth for local workshop convenience.
-CMD ["sh", "-c", "jupyter lab --ip=0.0.0.0 --port=${JUPYTER_PORT} --no-browser --allow-root --ServerApp.token='' --ServerApp.password='' --ServerApp.allow_origin='*'"]
+ENTRYPOINT ["./start-script.sh"]

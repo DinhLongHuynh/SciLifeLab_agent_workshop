@@ -7,8 +7,8 @@ c.NotebookApp.ip = '*'
 # There's no browser in container (no x11)
 c.NotebookApp.open_browser = False
 
-# Access on port 2160
-c.NotebookApp.port = 2160
+# Access on port 8888
+c.NotebookApp.port = 8888
 
 # Allow root, required by runtime in container
 c.NotebookApp.allow_root = True
